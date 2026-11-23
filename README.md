@@ -44,3 +44,25 @@ flutter run
 flutter analyze
 flutter test
 ```
+
+## Download an Android APK
+
+The `Android APK` GitHub Actions workflow builds a signed release APK on every
+push to `main`. It can also be started manually from **Actions → Android APK →
+Run workflow**.
+
+When a run finishes, open it on GitHub and download `subs-android-apk` from its
+**Artifacts** section. GitHub downloads artifacts as a ZIP; extract it on the
+Android device and open the APK to install it. Android may ask you to allow the
+browser or file manager to install unknown apps.
+
+The workflow requires these repository Actions secrets:
+
+- `ANDROID_KEYSTORE_BASE64`: base64 contents of `android/app/upload-keystore.jks`.
+- `ANDROID_KEYSTORE_PASSWORD`: the `storePassword` from `android/key.properties`.
+- `ANDROID_KEY_ALIAS`: the `keyAlias` from `android/key.properties`.
+- `ANDROID_KEY_PASSWORD`: the `keyPassword` from `android/key.properties`.
+
+Add them at **Settings → Secrets and variables → Actions → New repository
+secret**. Keep the local keystore and `android/key.properties` backed up in a
+secure location. Future APK updates must be signed with the same key.
