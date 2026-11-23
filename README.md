@@ -56,6 +56,10 @@ When a run finishes, open it on GitHub and download `subs-android-apk` from its
 Android device and open the APK to install it. Android may ask you to allow the
 browser or file manager to install unknown apps.
 
+The same workflow also publishes a direct APK download page at
+<https://collbreno.github.io/subs/>. GitHub Pages must use **GitHub Actions** as
+its source under **Settings → Pages**.
+
 The workflow requires these repository Actions secrets:
 
 - `ANDROID_KEYSTORE_BASE64`: base64 contents of `android/app/upload-keystore.jks`.

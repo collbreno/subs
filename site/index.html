@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#465d91" />
+    <meta
+      name="description"
+      content="Download the latest Android build of Subs."
+    />
+    <title>Download Subs for Android</title>
+    <style>
+      :root {
+        color-scheme: light dark;
+        font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+        background: #f9f9ff;
+        color: #1a1b20;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        margin: 0;
+        display: grid;
+        place-items: center;
+        padding: 24px;
+        background:
+          radial-gradient(circle at top, #dbe2ff 0, transparent 44%),
+          #f9f9ff;
+      }
+
+      main {
+        width: min(100%, 460px);
+        padding: 40px 32px;
+        border: 1px solid #c6c6d0;
+        border-radius: 28px;
+        background: #f1f1fa;
+        box-shadow: 0 14px 36px rgb(31 42 68 / 14%);
+        text-align: center;
+      }
+
+      .icon {
+        width: 72px;
+        height: 72px;
+        margin: 0 auto 24px;
+        display: grid;
+        place-items: center;
+        border-radius: 22px;
+        background: #dbe2ff;
+        color: #244477;
+      }
+
+      .icon svg {
+        width: 38px;
+        height: 38px;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(2rem, 8vw, 2.75rem);
+        line-height: 1.08;
+        letter-spacing: -0.035em;
+      }
+
+      .lead {
+        margin: 16px auto 28px;
+        color: #45464f;
+        font-size: 1.05rem;
+        line-height: 1.55;
+      }
+
+      .download {
+        min-height: 56px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 26px;
+        border-radius: 18px;
+        background: #465d91;
+        color: #fff;
+        font-weight: 700;
+        text-decoration: none;
+        transition: transform 120ms ease, box-shadow 120ms ease;
+      }
+
+      .download:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgb(45 67 115 / 28%);
+      }
+
+      .download:focus-visible {
+        outline: 3px solid #244477;
+        outline-offset: 4px;
+      }
+
+      .download svg {
+        width: 22px;
+        height: 22px;
+      }
+
+      .note {
+        margin: 24px 0 0;
+        color: #5d5e67;
+        font-size: 0.84rem;
+        line-height: 1.45;
+      }
+
+      @media (prefers-color-scheme: dark) {
+        :root {
+          background: #111318;
+          color: #e3e2e9;
+        }
+
+        body {
+          background:
+            radial-gradient(circle at top, #28385f 0, transparent 44%),
+            #111318;
+        }
+
+        main {
+          border-color: #45464f;
+          background: #1b1c22;
+        }
+
+        .icon {
+          background: #293f6b;
+          color: #dbe2ff;
+        }
+
+        .lead,
+        .note {
+          color: #c6c6d0;
+        }
+
+        .download {
+          background: #b2c5ff;
+          color: #102a54;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M7 2h10a2 2 0 0 1 2 2v16l-3-2-2 2-2-2-2 2-2-2-3 2V4a2 2 0 0 1 2-2Zm2 5v2h6V7H9Zm0 4v2h6v-2H9Z" />
+        </svg>
+      </div>
+      <h1>Subs for Android</h1>
+      <p class="lead">
+        Track recurring subscriptions, shared costs, credit cards, and payments.
+      </p>
+      <a class="download" href="./subs.apk" download>
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M11 3h2v10.17l3.59-3.58L18 11l-6 6-6-6 1.41-1.41L11 13.17V3ZM5 19h14v2H5v-2Z" />
+        </svg>
+        Download APK
+      </a>
+      <p class="note">
+        Android may ask you to allow your browser to install unknown apps.
+        Each successful build replaces this file with the newest signed version.
+      </p>
+    </main>
+  </body>
+</html>
